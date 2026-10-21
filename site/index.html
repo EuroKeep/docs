@@ -1,0 +1,1224 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="./configuration/Docker%20Environment/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>EuroKeep - EuroKeep Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="./assets/stylesheets/modern/main.20815dad.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eurokeep" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="" title="EuroKeep Documentation" class="md-header__button md-logo" aria-label="EuroKeep Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EuroKeep Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EuroKeep
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="" title="EuroKeep Documentation" class="md-nav__button md-logo" aria-label="EuroKeep Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    EuroKeep Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  EuroKeep
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  EuroKeep
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-money-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Your Money - Your Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-eurokeep" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What is EuroKeep?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-hosted-by-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Self-Hosted by Design
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Installation
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Getting Started
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core Features
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Account Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#money-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Money Tracking
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#budget-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Budget Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Privacy Mode
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monitoring
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Documentation Structure
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-philosophy-behind-eurokeep" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Philosophy Behind EuroKeep
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configuration
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Configuration
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./configuration/Docker%20Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Docker Environment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Development
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Development
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./development/API%20Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API Documentation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manual
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Manual
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manual
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./manual/Account%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Account Management
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./manual/Budgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Budgets
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./manual/Money%20Transactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Money Transactions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./manual/Summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Summary
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./manual/User%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  User Management
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Setup
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Setup
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./setup/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Docker
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-money-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Your Money - Your Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-eurokeep" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What is EuroKeep?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-hosted-by-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Self-Hosted by Design
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Installation
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Getting Started
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core Features
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Account Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#money-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Money Tracking
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#budget-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Budget Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Privacy Mode
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monitoring
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Documentation Structure
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-philosophy-behind-eurokeep" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Philosophy Behind EuroKeep
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="eurokeep">EuroKeep<a class="headerlink" href="#eurokeep" title="Permanent link">&para;</a></h1>
+<h2 id="your-money-your-data">Your Money - Your Data<a class="headerlink" href="#your-money-your-data" title="Permanent link">&para;</a></h2>
+<p>EuroKeep is a self-hosted personal finance management application that gives you full control over your financial data.</p>
+<p>Unlike cloud-based solutions, EuroKeep can be deployed on your own infrastructure. Your accounts, balances, movements and budgets remain where they belong: under your control.</p>
+<p>This documentation provides everything you need to deploy, configure and use your own EuroKeep instance.</p>
+<hr />
+<h2 id="what-is-eurokeep">What is EuroKeep?<a class="headerlink" href="#what-is-eurokeep" title="Permanent link">&para;</a></h2>
+<p>EuroKeep helps you manage your personal finances in a simple and privacy-focused way.</p>
+<p>With EuroKeep you can:</p>
+<ul>
+<li>Manage multiple accounts and currencies</li>
+<li>Track income, expenses and transfers</li>
+<li>Organize movements with categories</li>
+<li>Create and monitor budgets</li>
+<li>Analyze your monthly financial development</li>
+<li>Hide sensitive information with Privacy Mode</li>
+<li>Export monitoring information via Prometheus</li>
+</ul>
+<p>The goal is not to replace complex banking software, but to provide a lightweight, transparent and self-hosted solution for managing your everyday finances.</p>
+<hr />
+<h2 id="self-hosted-by-design">Self-Hosted by Design<a class="headerlink" href="#self-hosted-by-design" title="Permanent link">&para;</a></h2>
+<p>EuroKeep is designed to run on your own server.</p>
+<p>EuroKeep is delivered as a single Docker image, <code>eurokeep/eurokeep</code>, that contains the complete product:</p>
+<ul>
+<li>Angular frontend</li>
+<li>Nginx as web server</li>
+<li>PHP-FPM application runtime</li>
+</ul>
+<p>The only other service it needs is a MariaDB database. The provided Docker Compose file starts one for you.</p>
+<hr />
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>All you need is two files in an empty directory:</p>
+<ul>
+<li>A Docker Compose file</li>
+<li>An environment file (<code>.env</code>)</li>
+</ul>
+<p>Database migrations run automatically on every start, and the default data is created on the first one.</p>
+<p>After starting the containers, administrative tasks such as user creation and password management are performed directly inside the EuroKeep container using CakePHP CLI commands.</p>
+<p>See <a href="setup/docker/">Docker</a> for the compose file and the environment file.</p>
+<hr />
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>A typical setup workflow:</p>
+<ol>
+<li>Put the compose file and the <code>.env</code> file into an empty directory</li>
+<li>Start the containers with <code>docker compose up -d</code></li>
+<li>Put a TLS reverse proxy in front of port 8080 (login only works via HTTPS)</li>
+<li>Create your first EuroKeep user inside the EuroKeep container</li>
+<li>Configure accounts, categories and budgets</li>
+<li>Start tracking your finances</li>
+</ol>
+<p>For detailed instructions, see the deployment and user management sections.</p>
+<hr />
+<h2 id="core-features">Core Features<a class="headerlink" href="#core-features" title="Permanent link">&para;</a></h2>
+<h3 id="account-management">Account Management<a class="headerlink" href="#account-management" title="Permanent link">&para;</a></h3>
+<p>Create and manage your financial accounts, including:</p>
+<ul>
+<li>Bank accounts</li>
+<li>Cash accounts</li>
+<li>Other balance sources</li>
+<li>IBAN information</li>
+<li>Multiple currencies</li>
+</ul>
+<hr />
+<h3 id="money-tracking">Money Tracking<a class="headerlink" href="#money-tracking" title="Permanent link">&para;</a></h3>
+<p>Record your financial activity through:</p>
+<ul>
+<li>Income</li>
+<li>Expenses</li>
+<li>Transfers between accounts</li>
+<li>Categories and comments</li>
+<li>Automatic category suggestions based on previous bookings</li>
+</ul>
+<hr />
+<h3 id="budget-management">Budget Management<a class="headerlink" href="#budget-management" title="Permanent link">&para;</a></h3>
+<p>Budgets allow you to define spending limits for categories and their subcategories.</p>
+<p>EuroKeep automatically summarizes matching movements and provides an overview of:</p>
+<ul>
+<li>Current spending</li>
+<li>Remaining budget</li>
+<li>Exceeded limits</li>
+<li>Related transactions</li>
+</ul>
+<hr />
+<h3 id="privacy-mode">Privacy Mode<a class="headerlink" href="#privacy-mode" title="Permanent link">&para;</a></h3>
+<p>Your financial information should remain private.</p>
+<p>Privacy Mode allows you to hide sensitive information such as:</p>
+<ul>
+<li>Account balances</li>
+<li>Money movements</li>
+<li>IBAN details</li>
+</ul>
+<p>This makes it possible to safely use EuroKeep even when others can see your screen.</p>
+<hr />
+<h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h2>
+<p>EuroKeep includes an experimental Prometheus exporter for monitoring financial statistics.</p>
+<blockquote>
+<p>⚠️ The exporter currently exposes sensitive information and should only be accessible to trusted systems.</p>
+</blockquote>
+<hr />
+<h2 id="documentation-structure">Documentation Structure<a class="headerlink" href="#documentation-structure" title="Permanent link">&para;</a></h2>
+<p>This documentation covers:</p>
+<ul>
+<li>Deployment using Docker Compose</li>
+<li>Container management</li>
+<li>User administration</li>
+<li>Account management</li>
+<li>Money tracking</li>
+<li>Transfers</li>
+<li>Budgets</li>
+<li>Monitoring</li>
+<li>Application usage</li>
+</ul>
+<hr />
+<h2 id="the-philosophy-behind-eurokeep">The Philosophy Behind EuroKeep<a class="headerlink" href="#the-philosophy-behind-eurokeep" title="Permanent link">&para;</a></h2>
+<p>Your financial data is personal.</p>
+<p>EuroKeep follows one simple principle:</p>
+<blockquote>
+<p><strong>Your Money - Your Data</strong></p>
+</blockquote>
+<p>No external service should decide where your financial information is stored.</p>
+<p>By running EuroKeep yourself, you stay in control of your data, your infrastructure and your privacy.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":[],"search":"./assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="./assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+    
+  </body>
+</html>

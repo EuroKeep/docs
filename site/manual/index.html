@@ -1,0 +1,869 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../development/API%20Documentation/">
+      
+      
+        <link rel="next" href="./Account%20Management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>Manual - EuroKeep Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.20815dad.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="EuroKeep Documentation" class="md-header__button md-logo" aria-label="EuroKeep Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EuroKeep Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manual
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="EuroKeep Documentation" class="md-nav__button md-logo" aria-label="EuroKeep Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    EuroKeep Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  EuroKeep
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configuration
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Configuration
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/Docker%20Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Docker Environment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Development
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Development
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/API%20Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API Documentation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manual
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Manual
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manual
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./Account%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Account Management
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./Budgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Budgets
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./Money%20Transactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Money Transactions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./Summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Summary
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./User%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  User Management
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Setup
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Setup
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Docker
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="manual">Manual<a class="headerlink" href="#manual" title="Permanent link">&para;</a></h1>
+<h1 id="running-commands">Running Commands<a class="headerlink" href="#running-commands" title="Permanent link">&para;</a></h1>
+<p>Many management commands need to be executed in the EuroKeep container, since they are part of the CakePHP binaries.</p>
+<p>The following command, run from your docker directory, opens a shell in the EuroKeep container. Here you can run the setup commands, e.g. create a new user.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>eurokeep<span class="w"> </span>/bin/sh
+</span></code></pre></div>
+<h1 id="user-manual">User Manual<a class="headerlink" href="#user-manual" title="Permanent link">&para;</a></h1>
+<p>This manual is still under construction.</p>
+<h2 id="system-wide-features">System Wide Features<a class="headerlink" href="#system-wide-features" title="Permanent link">&para;</a></h2>
+<p>There are multiple system wide features activated for EuroKeep.</p>
+<h3 id="calendar-bar">Calendar Bar<a class="headerlink" href="#calendar-bar" title="Permanent link">&para;</a></h3>
+<p>Many views contain the calendar bar. That part lets you navigate from one month to another which affects the displayed time range.</p>
+<h3 id="privacy-mode">Privacy Mode<a class="headerlink" href="#privacy-mode" title="Permanent link">&para;</a></h3>
+<p>If you click settings→hide data or show data, you can turn on an off the display of sensitive data. This applies to at least every balance object. No balance, whether an account balance nor transactions of money will then be shown. Also, the IBAN of your accounts will remain hidden until you click show data again.</p>
+<h2 id="user-management">User Management<a class="headerlink" href="#user-management" title="Permanent link">&para;</a></h2>
+<p>User Management is only available through CLI.</p>
+<h3 id="creating-a-user">Creating a User<a class="headerlink" href="#creating-a-user" title="Permanent link">&para;</a></h3>
+<p>To create a user, log in to your environment’s CLI and execute the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/var/www/html<span class="w"> </span><span class="c1"># bin/cake user_add</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Add<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>user.
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Please<span class="w"> </span>enter<span class="w"> </span>email.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&gt;<span class="w"> </span>mail@eurokeep.io
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Please<span class="w"> </span>enter<span class="w"> </span>name.
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&gt;<span class="w"> </span>Mail
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Please<span class="w"> </span>enter<span class="w"> </span>the<span class="w"> </span>password.
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&gt;<span class="w"> </span>Test
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>User<span class="w"> </span><span class="c1">#42, mail@eurokeep.io was created.</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>That<span class="err">'</span>s<span class="w"> </span>all,<span class="w"> </span>folks.
+</span></code></pre></div>
+<h3 id="resetting-password">Resetting Password<a class="headerlink" href="#resetting-password" title="Permanent link">&para;</a></h3>
+<p>To reset an existing user’s password, execute the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/var/www/html<span class="w"> </span><span class="c1"># bin/cake user_reset_password</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Select<span class="w"> </span>the<span class="w"> </span>user<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>EuroKeep<span class="w"> </span>instance,<span class="w"> </span>whose<span class="w"> </span>password<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>reset.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="m">1</span>:<span class="w"> </span>Jan<span class="w"> </span>Nox<span class="w"> </span><span class="o">(</span>jan@nox.kiwi<span class="o">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="m">42</span>:<span class="w"> </span>Mail<span class="w"> </span><span class="o">(</span>mail@eurokeep.io<span class="o">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Please<span class="w"> </span><span class="k">select</span><span class="w"> </span>a<span class="w"> </span>user<span class="w"> </span>ID<span class="w"> </span><span class="o">(</span><span class="m">1</span>/11<span class="o">)</span><span class="w"> </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&gt;<span class="w"> </span><span class="m">42</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Please<span class="w"> </span>enter<span class="w"> </span>the<span class="w"> </span>new<span class="w"> </span>password.
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&gt;<span class="w"> </span>Test42!
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>The<span class="w"> </span>password<span class="w"> </span>of<span class="w"> </span>user<span class="w"> </span><span class="c1">#42, mail@eurokeep.io has been changed.</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>That<span class="err">'</span>s<span class="w"> </span>all,<span class="w"> </span>folks.
+</span></code></pre></div>
+<h3 id="removing-a-user">Removing a User<a class="headerlink" href="#removing-a-user" title="Permanent link">&para;</a></h3>
+<p>Keep in mind, removing a user eradicates its existance. There will be no remains whatsoever, including accounts, transactions.</p>
+<p>EVERYTHING will be deleted.</p>
+<p>To delete a user from your EuroKeep instance, execute the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/var/www/html<span class="w"> </span><span class="c1"># bin/cake user_delete</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Select<span class="w"> </span>the<span class="w"> </span>user<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>remove<span class="w"> </span>from<span class="w"> </span>your<span class="w"> </span>EuroKeep<span class="w"> </span>instance
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">1</span>:<span class="w"> </span>Jan<span class="w"> </span>Nox<span class="w"> </span><span class="o">(</span>jan@nox.kiwi<span class="o">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">42</span>:<span class="w"> </span>Mail<span class="w"> </span><span class="o">(</span>mail@eurokeep.io<span class="o">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Please<span class="w"> </span><span class="k">select</span><span class="w"> </span>a<span class="w"> </span>user<span class="w"> </span>ID<span class="w"> </span><span class="o">(</span><span class="m">1</span>/11<span class="o">)</span><span class="w"> </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>&gt;<span class="w"> </span><span class="m">42</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Please<span class="w"> </span>enter<span class="w"> </span>the<span class="w"> </span>user<span class="w"> </span>email<span class="w"> </span>address<span class="w"> </span><span class="k">for</span><span class="w"> </span>sake<span class="w"> </span>of<span class="w"> </span>security.
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&gt;<span class="w"> </span>mail@eurokeep.io
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>The<span class="w"> </span>user<span class="w"> </span><span class="c1">#42, mail@eurokeep.io has been deleted, including all accounts, transactions, etc.</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>That<span class="err">'</span>s<span class="w"> </span>all,<span class="w"> </span>folks.
+</span></code></pre></div>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="account-management">Account Management<a class="headerlink" href="#account-management" title="Permanent link">&para;</a></h2>
+<h3 id="create-an-account">Create an Account<a class="headerlink" href="#create-an-account" title="Permanent link">&para;</a></h3>
+<p>To create an account, click the plus icon in your account overview page or directly click here Create an account for your user.</p>
+<p>At least, offer a name, an emoji and the account type and the currency the account is working with. Also, add the IBAN. For accounts without IBAN, this field will not be mandatory in the future, but it is for now.</p>
+<p>After saving, you can click on the success message and directly go to your new account.</p>
+<p>Otherwise, you can go to your account overview and find it there. there.</p>
+<h3 id="modify-an-account">Modify an Account<a class="headerlink" href="#modify-an-account" title="Permanent link">&para;</a></h3>
+<p>To modify an existing account, select the disired account in your account overview page and then click the pencil icon close to the account overview’s card in the top-right corner.</p>
+<p>Then edit anything you want. Don’t forget to click the save icon when done.</p>
+<h3 id="delete-an-account">Delete an Account<a class="headerlink" href="#delete-an-account" title="Permanent link">&para;</a></h3>
+<p>Deleting an account is possible on the Account’s modification page. Select the disired account in your account overview page and then head to the modification area by clicking the pencil icon in the top-right corner.</p>
+<p>On the left bottom area of the form, you can find the trashcan icon. Click that to remove the account.</p>
+<p>Keep in mind, that deleting an account will automatically delete all transactions and transfers to that account. There will be no remains of the account whatsoever.</p>
+<h2 id="booking-money">Booking Money<a class="headerlink" href="#booking-money" title="Permanent link">&para;</a></h2>
+<h3 id="create-a-transaction">Create a Transaction<a class="headerlink" href="#create-a-transaction" title="Permanent link">&para;</a></h3>
+<p>In your account overview page, select the desired account. Click the plus icon in the top right corner.</p>
+<p>Provide the comment, the spent balance and select the category for that transaction.</p>
+<p>The category will be selected automatically, if you book a new transfer with the same comment.</p>
+<p>During comment input, EuroKeep will try finding a previous booking entry with that commend.</p>
+<p>Click the save icon</p>
+<h3 id="modify-a-transaction">Modify a Transaction<a class="headerlink" href="#modify-a-transaction" title="Permanent link">&para;</a></h3>
+<p>In your account’s history, click on an existing transaction to open the transaction modification screen. Change the things you want and dont forget clicking the save icon.</p>
+<h3 id="delete-a-transaction">Delete a Transaction<a class="headerlink" href="#delete-a-transaction" title="Permanent link">&para;</a></h3>
+<p>In your account’s history, click on an existing transaction to open the transaction modification screen. In the bottom left corner you can find the trashcan icon.</p>
+<h3 id="transfering-money-from-one-account-to-another">Transfering Money from one Account to Another<a class="headerlink" href="#transfering-money-from-one-account-to-another" title="Permanent link">&para;</a></h3>
+<p>Same as Booking Money. But if you select a Transfer Account before adding a new transaction, the negative value of your transfer will also be created for the selected Transfer Account.</p>
+<p>However, when editing the transactions, you have to edit both transfers after another. This is not automated.</p>
+<p>This behavior also applies to removing a transaction.</p>
+<h2 id="budgets">Budgets<a class="headerlink" href="#budgets" title="Permanent link">&para;</a></h2>
+<p>Budgets rely on the category management. A budget is a limited amount of money that can be spent for a category and it’s sub-categories.</p>
+<p>This feature finds transactions of the current month that match the configured category and it’s sub-categories. These transactions will then be summarized into a value that was spent on the budget.</p>
+<p>The transactions can be seen in your Budget Manager if you click a Budget.</p>
+<p>The transactions of a budget are only filtered for the categories and the current month, making it possible to analyze a Budget accross multiple accounts which is pretty neat if you want to keep track of your money in terms of where you spend it.</p>
+<p>Of course, it does not prevent you from spending money.</p>
+<h3 id="creating-a-budget">Creating a Budget<a class="headerlink" href="#creating-a-budget" title="Permanent link">&para;</a></h3>
+<p>Go to your Budget Manager and click the plus icon in the top-right corner.</p>
+<p>Enter your title and your limit. Then select a category that should be used. Select the currency and the category your budget will limit.</p>
+<h3 id="modifying-a-budget">Modifying a Budget<a class="headerlink" href="#modifying-a-budget" title="Permanent link">&para;</a></h3>
+<p>Go to your Budget Manager and expand the desired budget by clicking it. Then you can see the pencil icon in the top-right corner of the budget’s card.</p>
+<p>Change the fields as you desire, dont’t forget saving your changes afterwards.</p>
+<h3 id="deleting-a-budget">Deleting a Budget<a class="headerlink" href="#deleting-a-budget" title="Permanent link">&para;</a></h3>
+<p>Open the Budget modification form. In the bottom-left corner you can find the trashcan icon that will remove the budget.</p>
+<p>Keep in mind: Deleting a Budget will not remove any other data from EuroKeep.</p>
+<h3 id="visualizing-budgets">Visualizing Budgets<a class="headerlink" href="#visualizing-budgets" title="Permanent link">&para;</a></h3>
+<p>Any Budget that you create will appear on the home screen of EuroKeep. This item will only show a progress bar for the budget. The bar represents the available amount. The shorter it gets, the less money is left for that budget.</p>
+<p>Clicking on a budget here will bring you right to your Budget Manager and expand the Budget you just clicked. This reveals a more detailed view on that budget - It tells you the limit, the remaining amount or the exceeded amount. Also, it shows all transactions that were found in the current month that were used to build the amound of spent money. From here, you can e.g. edit a transaction directly.</p>
+<h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h2>
+<p>For now, EuroKeep has a very simple and dumb Prometheus exporter. This is under heavy development and it does not limitate the output whatsoever. Who has access to this controller, will be given all info on all budgets of all users. So handle with absolute caution!</p>
+<p>PromQL Exporter</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>For now, there is a simple way to build monthly overviews on your income and spending. You can configure that view to show one or multiple of your accounts. If you open your Summary, it will show you the opening and closing balance of your selected accounts. Also, you will be able to see all spendings and income chronologically. Now you can compare that month to the previous month by using the navigation bar on the page.</p>
+<p>Of course, clicking on a transaction or an account leads you to their corresponding edit pages to fix small things ther</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+    
+  </body>
+</html>
